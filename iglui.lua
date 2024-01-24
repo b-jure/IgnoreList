@@ -93,7 +93,6 @@ function ui:set_header_text(text) mainframe.header_text:SetText(text) end
 function ui:set_scroll_text(text)
     matches.text:SetText(text)
     matches:SetHeight(matches.text:GetStringHeight())
-    iglist.debug:print("Height is " .. matches:GetHeight())
     increase_scrollarea(scrollcontent, matches:GetHeight())
 end
 -- Set mainframe title text

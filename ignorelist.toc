@@ -1,0 +1,9 @@
+## Interface: 50408
+## Title: IgnoreList
+## Notes: IgnoreList notifier.
+## Version: 1.0
+## DefaultState: enabled
+
+igldebug.lua
+iglui.lua
+igl.lua

@@ -1,0 +1,6 @@
+Clone the repo and place the files in a folder,
+then move that folder in 'Interface/AddOns'.
+You can additionally delete '.gitignore'.
+
+This addon was meant to be used for interface 
+version 5.4.8 (last Mists of Pandaria patch).

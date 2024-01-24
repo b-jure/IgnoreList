@@ -58,7 +58,7 @@ local function rescan_and_update()
     local members = getmembers(GetNumGroupMembers() - 1)
     local matches = getmatches(members, IgnoreList.names)
     local text, len = getnames(matches)
-    ui:set_header_text(string.format("Matched %d players!", len))
+    ui:set_header_text(string.format("Matched %d", len))
     ui:set_scroll_text(text)
 end
 

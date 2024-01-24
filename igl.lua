@@ -141,4 +141,3 @@ end
 for k, _ in pairs(eventframe.events) do eventframe:RegisterEvent(k) end
 -- set event handlers to run on each event trigger
 eventframe:SetScript("OnEvent", function(self, event, ...) eventframe.events[event](self, ...) end)
-iglist.commands:open()

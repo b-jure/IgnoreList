@@ -34,9 +34,9 @@ local function getmembers(member_cnt)
     local members = {}
     for i = 1, member_cnt, 1 do
         if IsInRaid() then
-            members[(GetRaidRosterInfo(i))] = true
+            members[(GetRaidRosterInfo(i)) or ""] = true
         else -- @in party ? Maybe it breaks if in battleground
-            members[(UnitName("party" .. i))] = true
+            members[(UnitName("party" .. i)) or ""] = true
         end
     end
     return members

@@ -13,12 +13,12 @@ local eventframe = IgnoreList.eventframe
 local function updateigl() -- updates 'IgnoreList'
     local ignores = {}
     local len = GetNumIgnores()
-    for i = 0, len, 1 do ignores[GetIgnoreName(i)] = true end
+    for i = 1, len, 1 do ignores[GetIgnoreName(i)] = true end
     IgnoreList.names = ignores
 end
 
 -- Get names of all group members that are on ignore
--- list in textual format (string).
+-- list.
 local function getnames(matches)
     local namesstr = ""
     local len = 0
@@ -55,7 +55,7 @@ local function rescan_and_update()
         ui:set_header_text("Not in group.")
         return
     end
-    local members = getmembers(GetNumGroupMembers() - 1)
+    local members = getmembers(GetNumGroupMembers())
     local matches = getmatches(members, IgnoreList.names)
     local text, len = getnames(matches)
     ui:set_header_text(string.format("Matched %d", len))
